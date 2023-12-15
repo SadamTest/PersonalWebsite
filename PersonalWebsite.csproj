@@ -15,7 +15,6 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Include="images\RandomFox.gif" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,10 +4,12 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../images/RandomFox.gif');
+    background-image: url('../images/Background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center right;
+    color: white; /* Set body text color to black */
 }
 
 .container {
@@ -16,10 +18,13 @@ body {
 }
 
 .header {
-    background: linear-gradient(45deg, #394240, #2c3338, #1c1e21);
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+    /* Light Blue Gradient for Header */
+    background: #ACCBF9;
+    color: #242852;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navigation {
@@ -27,6 +32,7 @@ body {
     justify-content: center;
 }
 
+    /* Navigation Links */
     .navigation ul {
         list-style: none;
         margin: 0;
@@ -34,24 +40,25 @@ body {
     }
 
     .navigation li {
-        margin-right: 20px;
+        margin-right: 30px;
         display: inline;
     }
 
     .navigation a {
-        color: #ffffff;
+        color: #4A66AC;
         text-decoration: none;
         font-weight: bold;
     }
 
 .content {
     padding: 20px;
-    color: #333;
+    color: #4A66AC;
 }
 
 .footer {
-    background-color: #394240;
-    color: #ffffff;
+    /* Light Blue Background for Footer */
+    background: #ACCBF9;
+    color: #4A66AC;
     padding: 0px 10px;
     text-align: right;
     position: fixed;
