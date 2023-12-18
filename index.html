@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/site.css" />
-    <link rel="stylesheet" href="css/menu.css" /> <!-- Link to the external CSS file for menu styles -->
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <title>Steven Adam - Professional System Testing</title>
 </head>
 
@@ -16,6 +17,7 @@
             <div class="menu-icon" onclick="toggleMenu()">☰</div>
             <div class="menu-options" id="menuOptions">
                 <ul>
+                    <li><a href="#Home">Home</a></li>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Skills">Skills</a></li>
                     <li><a href="#Contact">Contact</a></li>
@@ -41,10 +43,10 @@
                 <!-- Add more social media icons as needed -->
             </div>
         </section>
-            Mail 
-            PDF CV
-            
-            <p><a href="../PersonalWebsite/attachments/CV.pdf" download>Download PDF</a></p>-->
+        Mail
+        PDF CV
+
+        <p><a href="../PersonalWebsite/attachments/CV.pdf" download>Download PDF</a></p>-->
 
 
         </section>
@@ -96,10 +98,38 @@
             <!-- Add more content as needed -->
         </section>
 
+        <header class="header">
+            <div class="menu-container">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <div class="menu-options" id="menuOptions" hidden>
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Skills">Skills</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                        <li><a href="#CV">CV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var menuOptions = document.getElementById('menuOptions');
+                // Check if the element is hidden
+                var isHidden = menuOptions.hasAttribute('hidden');
+
+                // If hidden, remove the attribute, otherwise set the display to none
+                if (!isHidden) {
+                    menuOptions.style.display = 'none';
+                } else {
+                    menuOptions.removeAttribute('hidden');
+                }
+            });
+
             function toggleMenu() {
                 var menuOptions = document.getElementById('menuOptions');
-                menuOptions.style.display = menuOptions.style.display === 'none' ? 'flex' : 'none';
+                menuOptions.style.display = menuOptions.style.display === 'none' ? 'block' : 'none';
             }
         </script>
 
