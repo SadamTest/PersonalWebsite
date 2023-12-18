@@ -100,10 +100,26 @@ body {
         white-space: nowrap;
         margin: 0 auto;
         letter-spacing: 0.25em;
-        animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-        -webkit-animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-        -moz-animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        animation: typing 3s steps(16, end), blink-caret 0.75s step-end infinite;
+        -webkit-animation: typing 3s steps(16, end), blink-caret 0.75s step-end infinite;
+        -moz-animation: typing 3s steps(16, end), blink-caret 0.75s step-end infinite;
     }
+
+    #Home a {
+        margin-top: 50px; /* Adjust the margin to increase the gap */
+    }
+
+.social-media-icons {
+    display: flex;
+    margin-top: 20px; /* Adjust the margin to increase the gap */
+}
+
+.social-media-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px; /* Adjust the margin to create space between icons */
+}
+
 
 @keyframes typing {
     from {
@@ -111,7 +127,7 @@ body {
     }
 
     to {
-        width: 25%;
+        width: 13%;
     }
 }
 
