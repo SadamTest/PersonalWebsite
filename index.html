@@ -13,17 +13,15 @@
 <body>
 
     <header class="header">
-        <div class="menu-container">
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <div class="menu-options" id="menuOptions">
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                    <li><a href="#CV">CV</a></li>
-                </ul>
-            </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-options" id="menuOptions">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#CV">CV</a></li>
+            </ul>
         </div>
     </header>
 
@@ -43,28 +41,10 @@
                 <!-- Add more social media icons as needed -->
             </div>
         </section>
-        Mail
-        PDF CV
-
-        <p><a href="../PersonalWebsite/attachments/CV.pdf" download>Download PDF</a></p>-->
-
-
-        </section>
-
 
         <section id="About" class="content">
             <h2>About Me</h2>
             <!-- Your content goes here -->
-            <p>Hello, I'm Steve. This is my personal webpage.</p>
-            <p>1Hello, I'm Steve. This is my personal webpage.</p>
-            <p>2Hello, I'm Steve. This is my personal webpage.</p>
-            <p>3Hello, I'm Steve. This is my personal webpage.</p>
-            <p>6Hello, I'm Steve. This is my personal webpage.</p>
-            <p>6Hello, I'm Steve. This is my personal webpage.</p>
-            <p>8Hello, I'm Steve. This is my personal webpage.</p>
-            <p>9Hello, I'm Steve. This is my personal webpage.</p>
-            <p>0Hello, I'm Steve. This is my personal webpage.</p>
-
             <p>Hello, I'm Steve. This is my personal webpage.</p>
             <!-- Add more content as needed -->
         </section>
@@ -98,40 +78,27 @@
             <!-- Add more content as needed -->
         </section>
 
-        <header class="header">
-            <div class="menu-container">
-                <div class="menu-icon" onclick="toggleMenu()">☰</div>
-                <div class="menu-options" id="menuOptions" hidden>
-                    <ul>
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#About">About</a></li>
-                        <li><a href="#Skills">Skills</a></li>
-                        <li><a href="#Contact">Contact</a></li>
-                        <li><a href="#CV">CV</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+    </div>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var menuOptions = document.getElementById('menuOptions');
-                // Check if the element is hidden
-                var isHidden = menuOptions.hasAttribute('hidden');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuOptions = document.getElementById('menuOptions');
+            // Check if the element is hidden
+            var isHidden = menuOptions.hasAttribute('hidden');
 
-                // If hidden, remove the attribute, otherwise set the display to none
-                if (!isHidden) {
-                    menuOptions.style.display = 'none';
-                } else {
-                    menuOptions.removeAttribute('hidden');
-                }
-            });
-
-            function toggleMenu() {
-                var menuOptions = document.getElementById('menuOptions');
-                menuOptions.style.display = menuOptions.style.display === 'none' ? 'block' : 'none';
+            // If hidden, remove the attribute, otherwise set the display to none
+            if (!isHidden) {
+                menuOptions.style.display = 'none';
+            } else {
+                menuOptions.removeAttribute('hidden');
             }
-        </script>
+        });
+
+        function toggleMenu() {
+            var menuOptions = document.getElementById('menuOptions');
+            menuOptions.style.display = menuOptions.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 
 </body>
 

@@ -14,15 +14,15 @@
 
     #Home h2 {
         font-family: 'Arial', sans-serif;
-        font-size: 3rem; /* Adjust the font size */
+        font-size: 2.5rem; /* Adjust the font size */
         color: #242852;
         padding-bottom: 7px;
         overflow: hidden;
     }
 
     #Home p {
-        padding-top: 5px;
-        font-size: 2.5rem;
+        padding-top: 0px; /* Adjust the padding to increase the gap */
+        font-size: 2rem;
         color: #242852;
         overflow: hidden;
         border-right: 0.15em solid #242852;
@@ -48,7 +48,6 @@
     height: auto;
     margin-right: 20px; /* Adjust the margin to create space between icons */
 }
-
 
 @keyframes typing {
     from {
