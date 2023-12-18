@@ -1,18 +1,20 @@
+/* External CSS file for site styles */
+
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     background-image: url('../images/Background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center right;
     color: white;
+    margin: 0; /* Remove default body margin */
 }
 
 .container {
     max-width: 100%;
     margin: 0 auto;
+    padding-top: 50px; /* Adjust based on your header container height */
 }
 
 .header {
@@ -26,8 +28,8 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
     transition: background 0.2s; /* Add a smooth transition effect */
+    overflow: visible;
 }
 
 .navigation {
@@ -53,13 +55,8 @@ body {
     }
 
 .content {
-    margin-top: 200px;
+    padding: 20px;
     color: #4A66AC;
-    padding: 10px 10px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .logo {

@@ -7,10 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="css\menu.css" />
     <None Remove="css\site.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="css\menu.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Include="css\site.css">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
