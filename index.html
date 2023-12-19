@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <title>Steven Adam - Professional System Testing</title>
+    <title>Steven Adam | System Testing</title>
+    <link rel="shortcut icon" type="image/jpg" href="../PersonalWebsite/images/Profile.png" alt="ProfilePic">
 </head>
 
 <body>
@@ -32,14 +33,40 @@
             <p>a system tester</p>
 
             <div class="social-media-icons">
-                <a href="https://github.com/SadamTest" target="_blank">
-                    <img src="../PersonalWebsite/images/GitHub.png" alt="GitHub" class="social-media-logo" />
-                </a>
                 <a href="http://www.linkedin.com/in/steven-adam1" target="_blank">
                     <img src="../PersonalWebsite/images/LinkedIn.png" alt="LinkedIn" class="social-media-logo" />
+                    <span class="tooltip">LinkedIn</span>
                 </a>
-                <!-- Add more social media icons as needed -->
+                <a href="https://github.com/SadamTest" target="_blank">
+                    <img src="../PersonalWebsite/images/GitHub.png" alt="GitHub" class="social-media-logo" />
+                    <span class="tooltip">GitHub</span>
+                </a>
+                <a href="mailto:s.adam1@live.com" target="blank">
+                    <img src="../PersonalWebsite/images/Mail.png" alt="Mail" class="social-media-logo" />
+                    <span class="tooltip">EMail</span>
+                </a>
+                <a target="_blank" href="../PersonalWebsite/attachments/CV.pdf" download>
+                    <img src="../PersonalWebsite/images/PDF.png" alt="PDF" class="social-media-logo" />
+                    <span class="tooltip">CV</span>
+                </a>
             </div>
+            <i id="scrollDownIcon">&#9660;</i>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var scrollDownIcon = document.getElementById('scrollDownIcon');
+                    scrollDownIcon.addEventListener('click', function () {
+                        // Get the About section
+                        var aboutSection = document.getElementById('About');
+
+                        // Calculate the offset to include the height of the fixed header
+                        var headerHeight = document.querySelector('.header').offsetHeight;
+                        var targetOffset = aboutSection.offsetTop - headerHeight;
+
+                        // Use smooth scrolling to the About section
+                        window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+                    });
+                });
+            </script>
         </section>
 
         <section id="About" class="content">

@@ -14,7 +14,7 @@
 
     #Home h2 {
         font-family: 'Arial', sans-serif;
-        font-size: 2.5rem; /* Adjust the font size */
+        font-size: 3rem; /* Adjust the font size */
         color: #242852;
         padding-bottom: 7px;
         overflow: hidden;
@@ -22,17 +22,18 @@
 
     #Home p {
         padding-top: 0px; /* Adjust the padding to increase the gap */
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: #242852;
         overflow: hidden;
         border-right: 0.15em solid #242852;
         white-space: nowrap;
         margin: 0 auto;
         letter-spacing: 0.25em;
-        animation: typing 3s steps(16, end), blink-caret 0.75s step-end infinite;
-        -webkit-animation: typing 3s steps(16, end), blink-caret 0.75s step-end infinite;
-        -moz-animation: typing 3s steps(16, end), blink-caret 0.75s step-end infinite;
+        animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
+        -webkit-animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
+        -moz-animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
     }
+
 
     #Home a {
         margin-top: 50px; /* Adjust the margin to increase the gap */
@@ -40,22 +41,27 @@
 
 .social-media-icons {
     display: flex;
-    margin-top: 20px; /* Adjust the margin to increase the gap */
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; /* Align the icons to the bottom */
+    margin-top: 10px; /* Increase the margin to create more space */
+    margin-bottom: 200px;
+    padding-top: 1.0%;
 }
 
 .social-media-logo {
     width: 50px;
     height: auto;
-    margin-right: 20px; /* Adjust the margin to create space between icons */
+    margin: 0 25px; /* Adjust the margin to create more space between icons */
+    position: relative;
 }
-
 @keyframes typing {
     from {
         width: 0;
     }
 
     to {
-        width: 13%;
+        width: 25%;
     }
 }
 
@@ -85,6 +91,53 @@
     }
 
     50% {
-        border-color: grey;
+        border-color: #242852;
     }
 }
+
+
+#scrollDownIcon {
+    color: #4A66AC; /* Match the color of your menu-icon */
+    font-size: 3rem; /* Set the font size as needed */
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    #scrollDownIcon:hover {
+        color: #2A3E6E; /* Change the color on hover if desired */
+    }
+
+.social-media-icons a {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 110%; /* Position the tooltip below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(200, 200, 200, 0.9);
+    color: #4A66AC;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: max-content;
+}
+
+.social-media-icons a:hover .social-media-logo {
+    transform: scale(1.3); /* Increase the size on hover */
+    opacity: 0.5; /* Reduce opacity on hover */
+}
+
+.social-media-icons a:hover .tooltip {
+    display: block;
+}
+
