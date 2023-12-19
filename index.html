@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/home.css" />
-    <title>Steven Adam | System Testing</title>
+    <title>Steven Adam | Software Testing</title>
     <link rel="shortcut icon" type="image/jpg" href="../PersonalWebsite/images/Profile.png" alt="ProfilePic">
 </head>
 
@@ -17,12 +17,30 @@
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="menu-options" id="menuOptions">
             <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li><a href="#CV">CV</a></li>
+                <li><a href="#Home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                <li><a href="#Skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="#CV" onclick="toggleMenu()">CV</a></li>
             </ul>
+            <div class="social-media-icons-menu">
+                <a href="http://www.linkedin.com/in/steven-adam1" target="_blank">
+                    <img src="../PersonalWebsite/images/LinkedIn.png" alt="LinkedIn" class="social-media-logo-menu" />
+                    <span class="tooltip">LinkedIn</span>
+                </a>
+                <a href="https://github.com/SadamTest" target="_blank">
+                    <img src="../PersonalWebsite/images/GitHub.png" alt="GitHub" class="social-media-logo-menu" />
+                    <span class="tooltip">GitHub</span>
+                </a>
+                <a href="mailto:s.adam1@live.com" target="blank">
+                    <img src="../PersonalWebsite/images/Mail.png" alt="email" class="social-media-logo-menu" />
+                    <span class="tooltip">email</span>
+                </a>
+                <a target="_blank" href="../PersonalWebsite/attachments/CV.pdf" download>
+                    <img src="../PersonalWebsite/images/PDF.png" alt="PDF" class="social-media-logo-menu" />
+                    <span class="tooltip">CV</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -30,7 +48,7 @@
 
         <section id="Home" class="content">
             <h2>Hello, I'm Steven Adam</h2>
-            <p>a system tester</p>
+            <p>a software tester</p>
 
             <div class="social-media-icons">
                 <a href="http://www.linkedin.com/in/steven-adam1" target="_blank">
@@ -42,8 +60,8 @@
                     <span class="tooltip">GitHub</span>
                 </a>
                 <a href="mailto:s.adam1@live.com" target="blank">
-                    <img src="../PersonalWebsite/images/Mail.png" alt="Mail" class="social-media-logo" />
-                    <span class="tooltip">EMail</span>
+                    <img src="../PersonalWebsite/images/Mail.png" alt="email" class="social-media-logo" />
+                    <span class="tooltip">email</span>
                 </a>
                 <a target="_blank" href="../PersonalWebsite/attachments/CV.pdf" download>
                     <img src="../PersonalWebsite/images/PDF.png" alt="PDF" class="social-media-logo" />
@@ -66,6 +84,11 @@
                         window.scrollTo({ top: targetOffset, behavior: 'smooth' });
                     });
                 });
+
+                function toggleMenu() {
+                    var menuOptions = document.getElementById('menuOptions');
+                    menuOptions.style.display = menuOptions.style.display === 'none' ? 'block' : 'none';
+                }
             </script>
         </section>
 
@@ -79,7 +102,7 @@
         <section id="Skills" class="content">
             <h2>Skills</h2>
             <!-- Your content goes here -->
-            <p>Add list of skills:</p>
+            <p>Add a list of skills:</p>
             <p>Please also view GitHub to see my sample Selenium Java and C# training projects.</p>
             <a href="https://github.com/SadamTest" target="_blank">
                 <img src="../PersonalWebsite/images/GitHub.png" alt="GitHub" class="social-media-logo" />
@@ -120,11 +143,6 @@
                 menuOptions.removeAttribute('hidden');
             }
         });
-
-        function toggleMenu() {
-            var menuOptions = document.getElementById('menuOptions');
-            menuOptions.style.display = menuOptions.style.display === 'none' ? 'block' : 'none';
-        }
     </script>
 
 </body>

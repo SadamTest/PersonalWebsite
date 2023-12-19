@@ -28,6 +28,7 @@
         border-right: 0.15em solid #242852;
         white-space: nowrap;
         margin: 0 auto;
+        margin-top: 50px;
         letter-spacing: 0.25em;
         animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
         -webkit-animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;

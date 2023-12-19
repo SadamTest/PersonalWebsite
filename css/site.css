@@ -2,19 +2,18 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    /*background-image: url('../images/Background.png');*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center right;
     color: white;
-    margin: 0; /* Remove default body margin */
+    margin: 0;
 }
 
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding-top: 50px; /* Adjust based on your header container height */
+    padding-top: 50px;
 }
 
 .header {
@@ -28,7 +27,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: background 0.2s; /* Add a smooth transition effect */
+    transition: background 0.2s;
     overflow: visible;
 }
 
@@ -37,22 +36,22 @@ body {
     justify-content: center;
 }
 
-    .navigation ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    .navigation li {
-        margin-right: 30px;
-        display: inline;
-    }
+.navigation li {
+    margin-right: 30px;
+    display: inline;
+}
 
-    .navigation a {
-        color: #4A66AC;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.navigation a {
+    color: #4A66AC;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 .content {
     padding: 20px;
@@ -68,3 +67,35 @@ body {
     width: 50px;
     height: auto;
 }
+
+#Home {
+    background-image: url('../images/Background.png');
+    background-size: cover;
+    background-position: center right;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#Home h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+#Home p {
+    font-size: 1.5em;
+}
+
+#scrollDownIcon {
+    font-size: 2em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Add additional styles as needed */
+
