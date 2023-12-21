@@ -35,7 +35,6 @@
         -moz-animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
     }
 
-
     #Home a {
         margin-top: 50px; /* Adjust the margin to increase the gap */
     }
@@ -96,7 +95,6 @@
         border-color: #242852;
     }
 }
-
 
 #scrollDownIcon {
     color: #4A66AC; /* Match the color of your menu-icon */

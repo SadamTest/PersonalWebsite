@@ -63,36 +63,23 @@ body {
     height: auto;
 }
 
-.social-media-logo {
-    width: 50px;
-    height: auto;
-}
 
-#Home {
-    background-image: url('../images/Background.png');
-    background-size: cover;
-    background-position: center right;
+section {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
 }
 
-    #Home h2 {
-        font-family: 'Arial', sans-serif;
-        font-size: 2.5em;
-        margin-bottom: 0;
-    }
+h2 {
+    font-size: 1.5rem; /* Adjust the font size */
+    color: #4A66AC; /* Adjust the text color */
+    margin-top: 50px;
+    margin-bottom: 20px; /* Add margin as needed */
+    font-weight: bold; /* Reset font weight to normal */
+}
 
-    #Home p {
-        font-size: 1.5em;
-    }
-
-#scrollDownIcon {
-    font-size: 2em;
-    margin-top: 20px;
-    cursor: pointer;
+p {
+    font-size: 1rem;
+    color: #4A66AC;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: normal;
 }
