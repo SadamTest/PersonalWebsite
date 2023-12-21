@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/cv.css" />
     <title>Steven Adam | Software Testing</title>
     <link rel="shortcut icon" type="image/jpg" href="../PersonalWebsite/images/Profile.png" alt="ProfilePic">
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -69,33 +74,15 @@
                 </a>
             </div>
             <i id="scrollDownIcon">&#9660;</i>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    var scrollDownIcon = document.getElementById('scrollDownIcon');
-                    scrollDownIcon.addEventListener('click', function () {
-                        // Get the About section
-                        var aboutSection = document.getElementById('About');
-
-                        // Calculate the offset to include the height of the fixed header
-                        var headerHeight = document.querySelector('.header').offsetHeight;
-                        var targetOffset = aboutSection.offsetTop - headerHeight;
-
-                        // Use smooth scrolling to the About section
-                        window.scrollTo({ top: targetOffset, behavior: 'smooth' });
-                    });
-                });
-
-                function toggleMenu() {
-                    var menuOptions = document.getElementById('menuOptions');
-                    menuOptions.style.display = menuOptions.style.display === 'none' ? 'block' : 'none';
-                }
-            </script>
+            
         </section>
 
         <section id="About" class="content">
             <h2>About Me</h2>
             <!-- Your content goes here -->
             <p>Hello, I'm Steve. This is my personal webpage.</p>
+            <img src="../PersonalWebsite/images/House.png" alt="Home" />
+
             <!-- Add more content as needed -->
         </section>
 
@@ -129,21 +116,6 @@
         </section>
 
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var menuOptions = document.getElementById('menuOptions');
-            // Check if the element is hidden
-            var isHidden = menuOptions.hasAttribute('hidden');
-
-            // If hidden, remove the attribute, otherwise set the display to none
-            if (!isHidden) {
-                menuOptions.style.display = 'none';
-            } else {
-                menuOptions.removeAttribute('hidden');
-            }
-        });
-    </script>
 
 </body>
 

@@ -2,7 +2,7 @@
 
 .menu-icon {
     cursor: pointer;
-    font-size: 80px;
+    font-size: 70px;
     margin-left: auto; /* Set left margin to auto */
     margin-right: 20px; /* Adjust right margin as needed */
     padding: 10px 10px;
@@ -12,13 +12,19 @@
     display: none;
     position: absolute;
     top: 130px; /* Adjust top position as needed */
-    right: 0;
+    right: -100%;
     background-color: rgba(200, 200, 200, 0.5); /* Light grey with transparency */
     padding: 25px;
     border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
     text-align: center;
+    transition: right 0.5s linear;
 }
+
+    .menu-options.show {
+        right: 0px; /* Slide in from the left when the 'show' class is added */
+    }
+
 
     .menu-options ul {
         list-style: none;

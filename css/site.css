@@ -36,22 +36,22 @@ body {
     justify-content: center;
 }
 
-.navigation ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    .navigation ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.navigation li {
-    margin-right: 30px;
-    display: inline;
-}
+    .navigation li {
+        margin-right: 30px;
+        display: inline;
+    }
 
-.navigation a {
-    color: #4A66AC;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .navigation a {
+        color: #4A66AC;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 .content {
     padding: 20px;
@@ -81,21 +81,18 @@ body {
     color: white;
 }
 
-#Home h2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 0;
-}
+    #Home h2 {
+        font-family: 'Arial', sans-serif;
+        font-size: 2.5em;
+        margin-bottom: 0;
+    }
 
-#Home p {
-    font-size: 1.5em;
-}
+    #Home p {
+        font-size: 1.5em;
+    }
 
 #scrollDownIcon {
     font-size: 2em;
     margin-top: 20px;
     cursor: pointer;
 }
-
-/* Add additional styles as needed */
-
