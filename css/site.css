@@ -63,59 +63,140 @@ body {
     height: auto;
 }
 
-
 section {
     height: 100vh;
 }
 
 h2 {
-    font-size: 2rem; /* Adjust the font size */
-    color: #4A66AC; /* Adjust the text color */
+    font-size: 1.5rem;
+    color: #4A66AC;
     margin-top: 50px;
-    margin-bottom: 20px; /* Add margin as needed */
-    font-weight: bold; /* Reset font weight to normal */
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: #4A66AC;
     margin-top: 25px;
     margin-bottom: 20px;
     font-weight: normal;
 }
 
+/* About Section Styles */
 #About {
     display: flex;
-    align-items: center; /* Center items vertically in the flex container */
-    padding: 50px; /* Add padding as needed */
-    max-width: 100%; /* Set maximum width to prevent overflow */
-    margin: 0 auto; /* Center the section horizontally */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    align-items: center;
+    padding: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
     #About div {
-        flex: 1; /* Make the div take up remaining space */
-        margin-right: 50px; /* Add margin to create space between text and image */
+        flex: 1;
+        margin-right: 50px;
     }
 
     #About h2,
     #About p {
-        text-align: left; /* Center the text horizontally */
+        text-align: left;
     }
 
     #About img {
-        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        max-width: 100%;
         height: auto;
     }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     #About {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items horizontally in the flex container */
+        flex-direction: column;
+        align-items: center;
     }
 
         #About div {
-            margin: 20px 0; /* Adjust margin for spacing between elements */
+            margin: 20px 0;
         }
 }
+
+/* Skills Section Styles */
+#Skills {
+    text-align: left;
+    padding: 50px 50px 50px 50px; /* Adjust padding for better spacing */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+    #Skills .skills-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #Skills p {
+        text-align: left;
+        margin: 0; /* Reset margin to 0 */
+    }
+
+    #Skills h2 {
+        text-align: left;
+        padding: 0 0 15px 0;
+        margin: 0; /* Reset margin to 0 */
+    }
+
+    #Skills h3 {
+        list-style: none;
+        padding-bottom: -10px; /* Adjust the bottom padding for h3 */
+        padding-top: 10px; /* Adjust the bottom padding for h3 */
+    }
+
+    #Skills ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #Skills li {
+        margin-bottom: 0; /* Add spacing between list items */
+        padding-left: 20px;
+    }
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .skills-container > div {
+        flex: 0 0 48%;
+        margin-bottom: 20px;
+    }
+
+@media (max-width: 768px) {
+    .skills-container > div {
+        flex: 0 0 100%;
+    }
+}
+
+#Contact {
+    padding-top: 50px;
+    text-align: left;
+    padding: 50px 50px 50px 50px; /* Adjust padding for better spacing */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#Contact .contact-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+    #Contact .social-media-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: Left;
+        align-items: flex-end; /* Align the icons to the bottom */
+        margin-top: 10px; /* Increase the margin to create more space */
+        margin-bottom: 200px;
+        padding-top: 1.0%;
+    }
+
