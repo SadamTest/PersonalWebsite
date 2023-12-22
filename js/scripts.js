@@ -46,3 +46,34 @@ function scrollToSection(sectionId) {
     var targetOffset = targetSection.offsetTop - headerHeight;
     window.scrollTo({ top: targetOffset, behavior: 'smooth' });
 }
+
+//business card
+document.addEventListener('scroll', function () {
+    var contactSection = document.getElementById('Contact');
+    var businessCard = document.querySelector('.business-card');
+
+    var contactSectionRect = contactSection.getBoundingClientRect();
+    var isVisible = contactSectionRect.top < window.innerHeight && contactSectionRect.bottom >= 0;
+
+    if (isVisible) {
+        businessCard.classList.add('active');
+    } else {
+        businessCard.classList.remove('active');
+    }
+});
+
+
+//About
+document.addEventListener('scroll', function () {
+    var aboutSection = document.getElementById('About');
+    var aboutContent = aboutSection.querySelector('div');
+
+    var aboutSectionRect = aboutSection.getBoundingClientRect();
+    var isVisible = aboutSectionRect.top < window.innerHeight && aboutSectionRect.bottom >= 0;
+
+    if (isVisible) {
+        aboutContent.classList.add('animate', 'left');
+    } else {
+        aboutContent.classList.remove('animate', 'left');
+    }
+});
