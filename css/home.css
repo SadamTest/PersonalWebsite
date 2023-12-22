@@ -1,8 +1,9 @@
 /* Styles for the Home section */
 #Home {
-    background-image: url('../images/Background.png');
+/*    background-image: url('../images/Background.png');
     background-size: cover;
     background-position: center right;
+    */
     height: 100vh; /* Make the section fill the viewport height */
     display: flex;
     flex-direction: column;
@@ -30,9 +31,9 @@
         margin: 0 auto;
         margin-top: 50px;
         letter-spacing: 0.25em;
-        animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
-        -webkit-animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
-        -moz-animation: typing 4s steps(15, end), blink-caret 0.75s step-end infinite;
+        animation: typing 2s steps(15, end), blink-caret 0.75s step-end infinite;
+        -webkit-animation: typing 2s steps(15, end), blink-caret 0.75s step-end infinite;
+        -moz-animation: typing 2s steps(15, end), blink-caret 0.75s step-end infinite;
     }
 
     #Home a {
