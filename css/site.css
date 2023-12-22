@@ -199,6 +199,13 @@ p {
 }
 
 
+#Contact {
+    background-image: url('../images/Laptop.jpeg');
+    background-size: cover;
+    background-position: center right;
+}
+
+
 #Contact .business-card {
     perspective: 1000px;
     width: 500px;
@@ -236,7 +243,37 @@ p {
 
 #Contact .back {
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
 }
+
+    #Contact .back h2 {
+        text-align: left;
+        margin: 0;
+        color: #4A66AC; /* Darker color for the name */
+    }
+
+    #Contact .back p {
+        text-align: left;
+        margin: 0;
+        color: #4A66AC; /* Darker color for other details */
+    }
+
+    #Contact .back .social-media-icons {
+        position: absolute;
+        bottom: -200px;
+        right: 10px;
+        display: flex;
+    }
+
+        #Contact .back .social-media-icons a {
+            margin-right: -20px; /* Adjust this value to reduce the space between icons */
+        }
 
 /* Remaining styles unchanged */
 
@@ -246,6 +283,29 @@ p {
     border: 2px solid #4A66AC; /* Add border around the h2 */
     padding: 10px; /* Add padding for better visual appearance */
     letter-spacing: 0.25em;
+}
+
+#Contact h3 {
+    text-align: center; /* Align text centrally */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 2px solid #4A66AC; /* Add border around the h2 */
+    padding: 10px; /* Add padding for better visual appearance */
+    letter-spacing: 0.25em;
+}
+
+#Contact h4 {
+    text-align: center; /* Align text centrally */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px; /* Add padding for better visual appearance */
+    color: #242852;
+}
+#Contact p {
+    text-align: center; /* Align text centrally */
+    margin-bottom: -30px;
+    margin-top: -30px;
+    padding: 0px; /* Add padding for better visual appearance */
 }
 
 #Contact .card-inner p {
