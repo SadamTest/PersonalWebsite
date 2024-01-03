@@ -121,8 +121,8 @@
 .tooltip {
     display: none;
     position: absolute;
-    top: 110%; /* Position the tooltip below the image */
-    left: 50%;
+    top: 105%; /* Position the tooltip below the image */
+    left: 50%; /* Position the tooltip below the image */
     transform: translateX(-50%);
     background-color: rgba(200, 200, 200, 0.9);
     color: #4A66AC;

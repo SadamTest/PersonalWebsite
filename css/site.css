@@ -142,62 +142,77 @@ p {
 
 /* Skills Section Styles */
 #Skills {
-    text-align: left;
-    padding: 50px 50px 50px 50px; /* Adjust padding for better spacing */
+    text-align: left; /* Left-align the entire section */
+    padding: 50px;
     max-width: 100%;
     margin: 0 auto;
 }
 
     #Skills .skills-container {
-        max-width: 100%;
-        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Display images in 4 columns */
+        gap: 15px; /* Adjust the gap to your preference */
+        max-width: 60%; /* Set a maximum width for the container */
+        margin: 50px auto; /* Center the container */
     }
 
-    #Skills p {
-        text-align: left;
-        margin: 0; /* Reset margin to 0 */
+    #Skills img {
+        width: 80px; /* Set a fixed width for the images (adjust as needed) */
+        height: auto;
+        margin: 25px 30px; /* Add margin between images (adjust as needed) */
+        display: block; /* Fix for inline-block whitespace issue */
     }
 
     #Skills h2 {
+    text-align: left;
+    text-decoration: underline;
+}
+
+    #Skills p {
         text-align: left;
-        text-decoration: underline;
-        padding: 0 0 15px 0;
-        margin: 0; /* Reset margin to 0 */
+        max-width: 60%; /* Adjust this value according to your design */
     }
 
-    #Skills h3 {
-        list-style: none;
-        padding-bottom: -10px; /* Adjust the bottom padding for h3 */
-        padding-top: 10px; /* Adjust the bottom padding for h3 */
+    #Skills .skills-container img {
+        position: relative;
     }
 
-    #Skills ul {
-        list-style: none;
-        padding: 0;
+
+    #Skills .skills-container .skill-item {
+        position: relative;
+        display: inline-block;
     }
 
-    #Skills li {
-        margin-bottom: 0; /* Add spacing between list items */
-        padding-left: 20px;
-    }
+        #Skills .skills-container .skill-item img {
+            width: 80px;
+            height: auto;
+            margin: 25px 30px;
+            display: block;
+        }
 
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+        #Skills .skills-container .skill-item .tooltip {
+            display: none;
+            position: absolute;
+            top: 100%; /* Adjusted the tooltip position */
+            left: 26.5%; /* Adjusted the tooltip position */
+            transform: translateX(-50%);
+            background-color: rgba(200, 200, 200, 0.9);
+            color: #4A66AC;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: max-content;
+        }
 
-    .skills-container > div {
-        flex: 0 0 48%;
-        margin-bottom: 20px;
-    }
+        #Skills .skills-container .skill-item:hover img {
+            transform: scale(1.3); /* Increase the size on hover */
+            opacity: 0.5; /* Reduce opacity on hover */
+        }
 
-@media (max-width: 768px) {
-    .skills-container > div {
-        flex: 0 0 100%;
-    }
-}
-
+        #Skills .skills-container .skill-item:hover .tooltip {
+            display: block;
+        }
 
 #Contact {
     background-image: url('../images/Laptop.jpeg');
@@ -341,3 +356,4 @@ p {
     .business-card.active {
         transform: translateY(0);
     }
+
