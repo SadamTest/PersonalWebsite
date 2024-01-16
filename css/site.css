@@ -95,50 +95,42 @@ p {
     margin: 0 auto;
     box-sizing: border-box;
     overflow: hidden; /* Add overflow hidden to hide content outside the viewport */
+    position: relative; /* Add position relative to enable absolute positioning inside */
 }
-
-    #About .animate {
-        transform: translateX(0);
-        opacity: 1;
-        transition: transform 1s, opacity 1s;
-    }
-
-        #About .animate.left {
-            transform: translateX(0); /* Change to 0 to bring it back in from the left */
-            opacity: 1;
-        }
 
     #About div {
         flex: 1;
         margin-right: 50px;
+        transition: transform 2s; /* Add transition for the transform property */
+    }
+
+    #About.active div {
+        transform: translateX(0); /* Move the content in from the left on activation */
     }
 
     #About h2 {
         text-align: left;
         text-decoration: underline;
+        transform: translateX(-100%); /* Initial position outside the viewport */
+        transition: transform 2s; /* Add transition for the transform property */
+    }
+
+    #About.active h2 {
+        transform: translateX(0); /* Move the heading in from the left on activation */
     }
 
     #About p {
         text-align: left;
         max-width: 60%; /* Adjust this value according to your design */
+        transform: translateX(-150%); /* Initial position outside the viewport */
+        transition: transform 2s; /* Add transition for the transform property */
     }
 
-    #About img {
-        max-width: 100%;
-        height: auto;
+    #About.active p {
+        transform: translateX(0); /* Move the paragraphs in from the left on activation */
     }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    #About {
-        flex-direction: column;
-        align-items: center;
-    }
 
-        #About div {
-            margin: 20px 0;
-        }
-}
 
 /* Skills Section Styles */
 #Skills {
@@ -148,12 +140,22 @@ p {
     margin: 0 auto;
 }
 
+    #Skills.active p {
+        transform: translateY(0); /* Adjust as needed */
+    }
+
     #Skills .skills-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* Display images in 4 columns */
         gap: 15px; /* Adjust the gap to your preference */
         max-width: 60%; /* Set a maximum width for the container */
         margin: 50px auto; /* Center the container */
+        transform: translateX(-150%); /* Initial position outside the viewport */
+        transition: transform 2s; /* Add transition for the transform property */
+    }
+
+    #Skills.active .skills-container {
+        transform: translateY(0); /* Adjust as needed */
     }
 
     #Skills img {
@@ -161,16 +163,30 @@ p {
         height: auto;
         margin: 25px 30px; /* Add margin between images (adjust as needed) */
         display: block; /* Fix for inline-block whitespace issue */
-    }
+ }
+
+
 
     #Skills h2 {
-    text-align: left;
-    text-decoration: underline;
-}
+        text-align: left;
+        text-decoration: underline;
+        transform: translateX(-150%); /* Initial position outside the viewport */
+        transition: transform 2s; /* Add transition for the transform property */
+    }
+
+    #Skills.active h2 {
+        transform: translateY(0); /* Adjust as needed */
+    }
 
     #Skills p {
         text-align: left;
         max-width: 60%; /* Adjust this value according to your design */
+        transform: translateX(-150%); /* Initial position outside the viewport */
+        transition: transform 2s; /* Add transition for the transform property */
+    }
+
+    #Skills.active p {
+        transform: translateY(0); /* Adjust as needed */
     }
 
     #Skills .skills-container img {
@@ -214,6 +230,9 @@ p {
             display: block;
         }
 
+
+
+/* Content Section Styles */
 #Contact {
     background-image: url('../images/Laptop.jpeg');
     background-size: cover;

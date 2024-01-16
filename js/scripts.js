@@ -62,18 +62,54 @@ document.addEventListener('scroll', function () {
     }
 });
 
+//#About section
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to add the 'active' class to the #About section
+    function activateAboutSection() {
+        var aboutSection = document.getElementById('About');
+        aboutSection.classList.add('active');
+    }
 
-//About
-document.addEventListener('scroll', function () {
+    // Use Intersection Observer to trigger the animation when #About is in the viewport
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                activateAboutSection();
+                // Stop observing once activated to avoid unnecessary calls
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust the threshold value as needed
+
+    // Target the #About section with the observer
     var aboutSection = document.getElementById('About');
-    var aboutContent = aboutSection.querySelector('div');
+    if (aboutSection) {
+        observer.observe(aboutSection);
+    }
+});
 
-    var aboutSectionRect = aboutSection.getBoundingClientRect();
-    var isVisible = aboutSectionRect.top < window.innerHeight && aboutSectionRect.bottom >= 0;
+//#Skills section
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to add the 'active' class to the #Skills section
+    function activateSkillsSection() {
+        var skillsSection = document.getElementById('Skills');
+        skillsSection.classList.add('active');
+    }
 
-    if (isVisible) {
-        aboutContent.classList.add('animate', 'left');
-    } else {
-        aboutContent.classList.remove('animate', 'left');
+    // Use Intersection Observer to trigger the animation when #Skills is in the viewport
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                activateSkillsSection();
+                // Stop observing once activated to avoid unnecessary calls
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust the threshold value as needed
+
+    // Target the #Skills section with the observer
+    var skillsSection = document.getElementById('Skills');
+    if (skillsSection) {
+        observer.observe(skillsSection);
     }
 });
