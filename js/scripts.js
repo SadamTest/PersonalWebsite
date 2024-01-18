@@ -11,18 +11,27 @@
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var scrollDownIcon = document.getElementById('scrollDownIcon');
-    scrollDownIcon.addEventListener('click', function () {
-        var aboutSection = document.getElementById('About');
-
-        // Ensure the scroll goes to the top of the About section
-        var targetOffset = aboutSection.offsetTop;
-
-        // Use smooth scrolling to the About section
-        window.scrollTo({ top: targetOffset, behavior: 'smooth' });
-    });
-});
+function scrollToSection(sectionId) {
+    if (sectionId === "Home") {
+        // For the "Home" section, scroll to the "scrollToTop" element
+        const scrollToTopElement = document.getElementById("scrollToTop");
+        if (scrollToTopElement) {
+            scrollToTopElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    } else {
+        // For other sections, scroll to the top of the section, accounting for the fixed header
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            window.scrollTo({
+                top: section.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
 
 
 // Function to toggle the menu
@@ -41,10 +50,23 @@ function toggleMenu() {
 
 // Function to scroll directly to a section
 function scrollToSection(sectionId) {
-    var targetSection = document.getElementById(sectionId);
-    var headerHeight = document.querySelector('.header').offsetHeight;
-    var targetOffset = targetSection.offsetTop - headerHeight;
-    window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+    const section = document.getElementById(sectionId);
+
+    if (sectionId === "Home") {
+        // For the "Home" section, scroll to the top of the page
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    } else if (section) {
+        // For other sections, scroll to the top of the section, accounting for the fixed header
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        window.scrollTo({
+            top: section.offsetTop - headerHeight,
+            behavior: 'smooth'
+        });
+    }
 }
 
 //business card

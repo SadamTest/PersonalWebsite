@@ -1,6 +1,7 @@
 /* External CSS file for site styles */
 
 body {
+    height: 100vh;
     font-family: 'Arial', sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,6 +83,232 @@ p {
     margin-bottom: 20px;
     font-weight: normal;
 }
+
+/* Menu styles */
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 70px;
+    margin-left: auto; /* Set left margin to auto */
+    margin-right: 20px; /* Adjust right margin as needed */
+    padding: 10px 10px;
+}
+
+
+.menu-options {
+    display: none;
+    position: absolute;
+    top: 130px; /* Adjust top position as needed */
+    right: -100%;
+    background-color: rgba(200, 200, 200, 0.5); /* Light grey with transparency */
+    padding: 25px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    text-align: center;
+    transition: right 0.5s linear;
+    overflow-x: hidden;
+    overflow-y: auto; /* Use 'auto' to display scrollbar when needed */
+    max-height: 70vh;
+}
+
+    .menu-options.show {
+        right: 0px; /* Slide in from the right when the 'show' class is added */
+    }
+
+
+    .menu-options ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px 25px 10px 10px;
+    }
+
+    .menu-options li {
+        margin-bottom: 10px;
+    }
+
+    .menu-options a {
+        color: #4A66AC;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+        .menu-options a:hover {
+            opacity: 0.7; /* Reduce opacity on hover */
+        }
+
+.social-media-icons-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-logo-menu {
+    width: 30px; /* Adjust the size as needed */
+    height: auto;
+    margin: 0 15px; /* Adjust the margin to create more space between icons */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add smooth transition */
+}
+
+.menu-options a:hover .social-media-logo-menu {
+    transform: scale(1.3); /* Increase the size on hover */
+    opacity: 0.7; /* Reduce opacity on hover */
+}
+
+
+/* Home styles */
+
+#Home {
+    /*    background-image: url('../images/Background.png');
+    background-size: cover;
+    background-position: center right;
+    */
+    height: 100vh; /* Make the section fill the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 50px; /* Add margin at the bottom to create space between sections */
+    margin-bottom: 50px; /* Add margin at the bottom to create space between sections */
+    overflow: auto; /* or overflow: hidden; */
+    box-sizing: border-box;
+    position: relative; /* Set position to relative */
+}
+
+    #Home h2 {
+        font-family: 'Arial', sans-serif;
+        font-size: 3rem; /* Adjust the font size */
+        color: #242852;
+        padding-bottom: 7px;
+        overflow: hidden;
+    }
+
+    #Home p {
+        padding-top: 0px; /* Adjust the padding to increase the gap */
+        font-size: 2.5rem;
+        color: #242852;
+        overflow: hidden;
+        border-right: 0.15em solid #242852;
+        white-space: nowrap;
+        margin: 0 auto;
+        margin-top: 50px;
+        letter-spacing: 0.25em;
+        animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        -webkit-animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+        -moz-animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    #Home a {
+        margin-top: 50px; /* Adjust the margin to increase the gap */
+    }
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; /* Align the icons to the bottom */
+    margin-top: 10px; /* Increase the margin to create more space */
+    margin-bottom: 200px;
+    padding-top: 1.0%;
+}
+
+.social-media-logo {
+    width: 50px;
+    height: auto;
+    margin: 0 25px; /* Adjust the margin to create more space between icons */
+    position: relative;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #242852;
+    }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #242852;
+    }
+}
+
+#scrollDownIcon {
+    color: #4A66AC;
+    font-size: 3rem;
+    cursor: pointer;
+    position: absolute; /* Set position to absolute */
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999; /* Set a higher z-index */
+}
+
+
+    #scrollDownIcon:hover {
+        color: #2A3E6E; /* Change the color on hover if desired */
+    }
+
+.social-media-icons a {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 105%; /* Position the tooltip below the image */
+    left: 50%; /* Position the tooltip below the image */
+    transform: translateX(-50%);
+    background-color: rgba(200, 200, 200, 0.9);
+    color: #4A66AC;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: max-content;
+}
+
+.social-media-icons a:hover .social-media-logo {
+    transform: scale(1.3); /* Increase the size on hover */
+    opacity: 0.5; /* Reduce opacity on hover */
+}
+
+.social-media-icons a:hover .tooltip {
+    display: block;
+}
+
 
 /* About Section Styles */
 #About {
@@ -375,4 +602,113 @@ p {
     .business-card.active {
         transform: translateY(0);
     }
+
+@media only screen and (max-width: 768px) {
+    .navigation li {
+        margin-right: 20px; /* Adjust margin for smaller screens */
+    }
+
+
+    #Home {
+        height: 100%; /* Make the section fill the viewport height */
+    }
+
+        #Home h2 {
+            font-size: 2rem; /* Adjust font size for smaller screens */
+            padding-bottom: 0.5rem;
+        }
+
+        #Home p {
+            font-size: 1.8rem; /* Adjust font size for smaller screens */
+            margin-top: 0.5rem;
+            margin-bottom: 0.0rem;
+        }
+
+        #Home a {
+            margin-top: 2.5rem; /* Adjust the margin for smaller screens */
+            margin-bottom: 1rem;
+        }
+
+    .social-media-icons {
+        margin-bottom: 8rem; /* Adjust margin for smaller screens */
+    }
+
+    .social-media-logo {
+        width: 40px; /* Adjust icon size for smaller screens */
+        margin: 0 10px; /* Adjust margin for smaller screens */
+    }
+
+    #scrollDownIcon {
+        font-size: 1.5rem; /* Set the font size as needed */
+    }
+
+
+    #About,
+    #Skills,
+    #Contact {
+        min-height: 100vh; /* Set a minimum height to ensure the content is fully visible */
+        overflow-y: hidden; /* Disable vertical scrolling within the section */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center; /* Center text within sections */
+        padding: 20px; /* Add padding for better visual appearance */
+    }
+
+        #About h2,
+        #Skills h2,
+        #Contact h2 {
+            font-size: 1rem; /* Adjust font size for smaller screens */
+            padding-bottom: 0.5rem;
+        }
+
+        #About p,
+        #Skills p,
+        #Contact p {
+            max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
+            font-size: 0.8rem; /* Adjust font size for smaller screens */
+            margin-top: 0.5rem;
+            margin-bottom: 0.0rem;
+        }
+
+        #Skills .skills-container {
+            grid-template-columns: repeat(2, 1fr); /* Display images in 2 columns for smaller screens */
+            max-width: 80%; /* Adjust maximum width for smaller screens */
+        }
+
+        #Skills img {
+            width: 60px; /* Adjust image size for smaller screens */
+        }
+
+        #Contact .business-card {
+            width: 300px; /* Adjust business card width for smaller screens */
+        }
+
+    .menu-options {
+        height: 150%; /* Make the section fill the viewport height */
+        top: 80px; /* Adjust top position for smaller screens */
+    }
+
+    .menu-icon {
+        font-size: 2.5rem;
+    }
+
+    .social-media-logo-menu {
+        width: 25px; /* Adjust the size as needed */
+        height: auto;
+        margin: 0 10px; /* Adjust the margin to create more space between icons */
+    }
+
+    .menu-options li {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
 

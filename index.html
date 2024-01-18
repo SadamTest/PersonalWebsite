@@ -5,8 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/site.css" />
-		<link rel="stylesheet" href="css/menu.css" />
-		<link rel="stylesheet" href="css/home.css" />
 		<title>Steven Adam | Software Testing</title>
 		<link rel="shortcut icon" type="image/jpg" href="../PersonalWebsite/images/Profile.png" alt="ProfilePic">
 			<script src="js/scripts.js"></script>
@@ -14,6 +12,7 @@
 
 	<body>
 
+		<div id="scrollToTop"></div>
 		<header class="header">
 			<div class="menu-icon" onclick="toggleMenu()">☰</div>
 			<div class="menu-options" id="menuOptions">
@@ -55,34 +54,35 @@
 		<div class="container">
 
 			<section id="Home" class="content">
-				<h2>Hello, I'm Steven Adam</h2>
-				<p>a software tester</p>
+				<div class="content-wrapper">
+					<h2>Hello, I'm Steven Adam</h2>
+					<p>a software tester</p>
 
-				<div class="social-media-icons">
-					<a href="http://www.linkedin.com/in/steven-adam1" target="_blank">
-						<img src="../PersonalWebsite/images/LinkedIn.png" alt="LinkedIn" class="social-media-logo" />
-						<span class="tooltip">LinkedIn</span>
-					</a>
-					<a href="https://github.com/SadamTest" target="_blank">
-						<img src="../PersonalWebsite/images/GitHub.png" alt="GitHub" class="social-media-logo" />
-						<span class="tooltip">GitHub</span>
-					</a>
-					<a href="mailto:s.adam1@live.com" target="blank">
-						<img src="../PersonalWebsite/images/Mail.png" alt="email" class="social-media-logo" />
-						<span class="tooltip">email</span>
-					</a>
-					<a target="_blank" href="../PersonalWebsite/attachments/CV.pdf" download="">
-						<img src="../PersonalWebsite/images/PDF.png" alt="PDF" class="social-media-logo" />
-						<span class="tooltip">CV</span>
-					</a>
+					<div class="social-media-icons">
+						<a href="http://www.linkedin.com/in/steven-adam1" target="_blank">
+							<img src="../PersonalWebsite/images/LinkedIn.png" alt="LinkedIn" class="social-media-logo" />
+							<span class="tooltip">LinkedIn</span>
+						</a>
+						<a href="https://github.com/SadamTest" target="_blank">
+							<img src="../PersonalWebsite/images/GitHub.png" alt="GitHub" class="social-media-logo" />
+							<span class="tooltip">GitHub</span>
+						</a>
+						<a href="mailto:s.adam1@live.com" target="blank">
+							<img src="../PersonalWebsite/images/Mail.png" alt="email" class="social-media-logo" />
+							<span class="tooltip">email</span>
+						</a>
+						<a target="_blank" href="../PersonalWebsite/attachments/CV.pdf" download="">
+							<img src="../PersonalWebsite/images/PDF.png" alt="PDF" class="social-media-logo" />
+							<span class="tooltip">CV</span>
+						</a>
+					</div>
 				</div>
-				<i id="scrollDownIcon">&#9660;</i>
-
+			<!-- <i id="scrollDownIcon">&#9660;</i> -->
 			</section>
 		</div>
 
 		<section id="About" class="content">
-			<div>
+			<div class="content-wrapper">
 				<h2>About Me</h2>
 				<p>
 					Hello there! I'm a seasoned software tester calling Staffordshire home, where I navigate life's adventures alongside my wife and two young daughters.
@@ -120,6 +120,7 @@
 		</section>
 
 		<section id="Skills" class="content">
+			<div class="content-wrapper">
 			<h2>Skills</h2>
 			<p>
 				For a comprehensive overview of my qualifications and experiences, I kindly direct your attention to my curriculum vitae. It contains a detailed list of my skills, achievements, and professional background. Feel free to explore the document for a more in-depth understanding of my capabilities.
@@ -168,6 +169,7 @@
 				<div class="skill-item">
 					<img src="../PersonalWebsite/images/BusinessCentral.png" alt="BC" />
 					<span class="tooltip">Microsoft Dynamics 365 Business Central</span>
+				</div>
 				</div>
 				<!-- Repeat for other skills -->
 			</div>
