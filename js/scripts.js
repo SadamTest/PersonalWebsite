@@ -11,27 +11,19 @@
     }
 });
 
-function scrollToSection(sectionId) {
-    if (sectionId === "Home") {
-        // For the "Home" section, scroll to the "scrollToTop" element
-        const scrollToTopElement = document.getElementById("scrollToTop");
-        if (scrollToTopElement) {
-            scrollToTopElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    } else {
-        // For other sections, scroll to the top of the section, accounting for the fixed header
-        const section = document.getElementById(sectionId);
-        if (section) {
-            const headerHeight = document.querySelector('.header').offsetHeight;
-            window.scrollTo({
-                top: section.offsetTop - headerHeight,
-                behavior: 'smooth'
-            });
-        }
-    }
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollDownIcon = document.getElementById('scrollDownIcon');
+    scrollDownIcon.addEventListener('click', function () {
+        var aboutSection = document.getElementById('About');
+
+        // Ensure the scroll goes to the top of the About section
+        var targetOffset = aboutSection.offsetTop;
+
+        // Use smooth scrolling to the About section
+        window.scrollTo({ top: targetOffset, behavior: 'smooth' });
+    });
+});
 
 
 // Function to toggle the menu
@@ -50,22 +42,18 @@ function toggleMenu() {
 
 // Function to scroll directly to a section
 function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-
     if (sectionId === "Home") {
         // For the "Home" section, scroll to the top of the page
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    } else if (section) {
-        // For other sections, scroll to the top of the section, accounting for the fixed header
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        window.scrollTo({
-            top: section.offsetTop - headerHeight,
-            behavior: 'smooth'
-        });
+        scrollToTop();
+    } else {
+        // For other sections, scroll to the top of the specified section
+        const section = document.getElementById(sectionId);
+        if (section) {
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
     }
 }
 
@@ -105,8 +93,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Target the #About section with the observer
     var aboutSection = document.getElementById('About');
+
+    // Check if the section exists before observing (for safety)
     if (aboutSection) {
         observer.observe(aboutSection);
+    }
+
+    // Additionally, you may need to manually trigger the animation on smaller screens
+    // based on your design and requirements.
+
+    // Example: Manually trigger the animation on screens less than or equal to 768px width
+    if (window.innerWidth <= 768) {
+        activateAboutSection();
+    }
+
+    if (window.innerHeight <= 768) {
+        activateAboutSection();
     }
 });
 
@@ -131,7 +133,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Target the #Skills section with the observer
     var skillsSection = document.getElementById('Skills');
+
+    // Check if the section exists before observing (for safety)
     if (skillsSection) {
         observer.observe(skillsSection);
     }
+
+    // Additionally, you may need to manually trigger the animation on smaller screens
+    // based on your design and requirements.
+
+    // Example: Manually trigger the animation on screens less than or equal to 768px width
+    if (window.innerWidth <= 768) {
+        activateSkillsSection();
+    }
+
+    if (window.innerHeight <= 768) {
+        activateSkillsSection();
+    }
 });
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Trigger scrollToTop function on page load
+window.onload = scrollToTop;
