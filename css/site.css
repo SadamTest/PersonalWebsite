@@ -104,18 +104,18 @@ p {
 
 .menu-options {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 130px; /* Adjust top position as needed */
     right: -100%;
-    background-color: rgba(200, 200, 200, 0.5); /* Light grey with transparency */
+    background-color: rgba(200, 200, 200, 0.5);
     padding: 25px;
     border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: right 0.5s linear;
-    overflow-x: hidden;
     overflow-y: auto; /* Use 'auto' to display scrollbar when needed */
-    max-height: 70vh;
+    min-height: 17vh; /* Ensure a minimum height of 17% of the viewport height */
+    max-height: calc(100vh - 130px); /* Set the maximum height to the remaining viewport height after considering the top value */
 }
 
     .menu-options.show {
@@ -623,7 +623,7 @@ p {
     }
 
     .menu-options {
-        height: 150%; /* Make the section fill the viewport height */
+        /*height: 150%;*/ /* Make the section fill the viewport height */
         top: 80px; /* Adjust top position for smaller screens */
         padding: 10px;
     }
@@ -795,7 +795,7 @@ p {
     }
 
     .menu-options {
-        height: 150%; /* Make the section fill the viewport height */
+        /*height: 150%;*/ /* Make the section fill the viewport height */
         top: 80px; /* Adjust top position for smaller screens */
         padding: 10px;
     }
@@ -972,7 +972,7 @@ p {
     }
 
     .menu-options {
-        height: 150%; /* Make the section fill the viewport height */
+        /*height: 150%;*/ /* Make the section fill the viewport height */
         top: 80px; /* Adjust top position for smaller screens */
         padding: 10px;
     }
@@ -1150,27 +1150,6 @@ p {
         margin-right: 30px; /*Adjust margin for smaller screens*/
     }
 
-    /*.menu-options {
-        height: 150%;*/ /* Make the section fill the viewport height */
-    /*top: 80px;*/ /* Adjust top position for smaller screens */
-    /*padding: 10px;
-    }
-
-    .menu-icon {
-        font-size: 3rem;
-    }
-
-    .social-media-logo-menu {
-        width: 28px;*/ /* Adjust the size as needed */
-    /*height: auto;
-        margin: 0 10px;*/ /* Adjust the margin to create more space between icons */
-    /*}
-
-    .menu-options li {
-        font-size: 1rem;
-    }*/
-
-
     #Home, #About, #Skills, #Contact {
         min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
         height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
@@ -1230,20 +1209,11 @@ p {
         margin-bottom: 0.0rem;
     }
 
-    /*    #Skills .skills-container {
-        grid-template-columns: repeat(3, 1fr);  
-        max-width: 100%;  
-    }*/
-
     #Skills .skills-container .skill-item img {
         width: 80px;
         Adjusted width height: auto;
         margin: 15px 15px;
         Adjusted margin
-    }
-
-    #Contact {
- Make the section fill the viewport height
     }
 
         #Contact .business-card {

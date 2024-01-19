@@ -41,19 +41,31 @@ function toggleMenu() {
 }
 
 // Function to scroll directly to a section
+//function scrollToSection(sectionId) {
+//    if (sectionId === "Home") {
+//        // For the "Home" section, scroll to the top of the page
+//        scrollToTop();
+//    } else {
+//        // For other sections, scroll to the top of the specified section
+//        const section = document.getElementById(sectionId);
+//        if (section) {
+//            window.scrollTo({
+//                top: section.offsetTop,
+//                behavior: 'smooth'
+//            });
+//        }
+//    }
+//}
+
+
+
 function scrollToSection(sectionId) {
-    if (sectionId === "Home") {
-        // For the "Home" section, scroll to the top of the page
-        scrollToTop();
-    } else {
-        // For other sections, scroll to the top of the specified section
-        const section = document.getElementById(sectionId);
-        if (section) {
-            window.scrollTo({
-                top: section.offsetTop,
-                behavior: 'smooth'
-            });
-        }
+    const section = document.getElementById(sectionId);
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop,
+            behavior: 'smooth'
+        });
     }
 }
 
