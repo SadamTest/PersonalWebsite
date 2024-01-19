@@ -167,10 +167,10 @@ p {
 /* Menu styles */
 
 #Home {
-    /*    background-image: url('../images/Background.png');
-    background-size: cover;
+/*    background-image: url('../images/Background.png');
+    background-size: contain;
     background-position: center right;
-    */
+    background-repeat: no-repeat;*/
     /*height: 100vh;*/ /* Make the section fill the viewport height */
     display: flex;
     flex-direction: column;
@@ -321,8 +321,9 @@ p {
 #About {
     /*height: 100vh;*/ /* Make the section fill the viewport height */
     background-image: url('../images/Background.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center right;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     padding: 50px;
@@ -1066,7 +1067,7 @@ p {
 
         #Contact .business-card {
             perspective: 500px;
-            width: 300px;
+            width: 350px;
             height: 175px;
             margin: 100px auto 25px auto;
         }
@@ -1176,12 +1177,12 @@ p {
     }
 
         #Home h2 {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
             Adjust font size for smaller screens padding-bottom: 0.8rem;
         }
 
         #Home p {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             Adjust font size for smaller screens margin-top: 0.9rem;
             margin-bottom: 0.0rem;
         }
@@ -1192,12 +1193,12 @@ p {
         }
 
     .social-media-icons {
-        margin-bottom: 8.4rem;
+        margin-bottom: 8.7rem;
         Adjust margin for smaller screens
     }
 
     .social-media-logo {
-        width: 40px;
+        width: 45px;
         Adjust icon size for smaller screens margin: 0 15px;
         Adjust margin for smaller screens
     }
@@ -1235,9 +1236,9 @@ p {
     }*/
 
     #Skills .skills-container .skill-item img {
-        width: 50px;
+        width: 80px;
         Adjusted width height: auto;
-        margin: 10px 10px;
+        margin: 15px 15px;
         Adjusted margin
     }
 
@@ -1246,7 +1247,7 @@ p {
     }
 
         #Contact .business-card {
-            margin: 120px auto 25px auto;
+            margin: 175px auto 25px auto;
         }
 
         #Contact .front,
@@ -1285,26 +1286,26 @@ p {
             border: 1px solid #4A66AC;
             Add border around the h2 padding: 5px;
             Add padding for better visual appearance letter-spacing: 0.19em;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
         }
 
         #Contact h3 {
             border: 1px solid #4A66AC;
             Add border around the h2 padding: 5px;
             Add padding for better visual appearance letter-spacing: 0.17em;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
         }
 
         #Contact h4 {
             margin-bottom: 5px;
             margin-top: 5px;
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
         #Contact p {
             margin-bottom: -15px;
             margin-top: -15px;
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
 
         #Contact .card-inner p {
@@ -1320,7 +1321,7 @@ p {
             }
 
         #Contact .social-media-logo {
-            width: 34px;
+            width: 40px;
             Adjust icon size for smaller screens margin: 0 12px;
             Adjust margin for smaller screens
         }
