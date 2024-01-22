@@ -583,9 +583,10 @@ p {
 }
 #Contact p {
     text-align: center; /* Align text centrally */
-    margin-bottom: -30px;
-    margin-top: -30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     padding: 0px; /* Add padding for better visual appearance */
+
 }
 
 #Contact .card-inner p {
@@ -695,8 +696,7 @@ p {
     }
 
     #About p,
-    #Skills p,
-    #Contact p {
+    #Skills p {
         max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
         font-size: 0.4rem; /* Adjust font size for smaller screens */
         margin-top: 0.5rem;
@@ -752,14 +752,12 @@ p {
         #Contact .back h2 {
             text-align: left;
             margin: 0;
-            color: #4A66AC; /* Darker color for the name */
         }
 
         #Contact .back p {
             text-align: left;
             margin: 0;
-            color: #4A66AC; /* Darker color for other details */
-        }
+       }
 
         #Contact .back .social-media-icons {
             position: absolute;
@@ -794,8 +792,8 @@ p {
     }
 
     #Contact p {
-        margin-bottom: -15px;
-        margin-top: -15px;
+        margin-bottom: 0px;
+        margin-top: 0px;
         font-size: 0.8rem;
     }
 
@@ -889,8 +887,8 @@ p {
     }
 
     #About p,
-    #Skills p,
-    #Contact p {
+    #Skills p
+    {
         max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
         font-size: 0.7rem; /* Adjust font size for smaller screens */
         margin-top: 0.5rem;
@@ -946,14 +944,12 @@ p {
         #Contact .back h2 {
             text-align: left;
             margin: 0;
-            color: #4A66AC; /* Darker color for the name */
         }
 
         #Contact .back p {
             text-align: left;
             margin: 0;
-            color: #4A66AC; /* Darker color for other details */
-        }
+      }
 
         #Contact .back .social-media-icons {
             position: absolute;
@@ -988,8 +984,6 @@ p {
     }
 
     #Contact p {
-        margin-bottom: -15px;
-        margin-top: -15px;
         font-size: 0.8rem;
     }
 
@@ -1080,8 +1074,8 @@ p {
     }
 
     #About p,
-    #Skills p,
-    #Contact p {
+    #Skills p
+     {
         max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
         font-size: 0.8rem; /* Adjust font size for smaller screens */
         margin-top: 0.7rem;
@@ -1144,14 +1138,12 @@ p {
             #Contact .back h2 {
                 text-align: left;
                 margin: 0;
-                color: #4A66AC; /* Darker color for the name */
-            }
+           }
 
             #Contact .back p {
                 text-align: left;
                 margin: 0;
-                color: #4A66AC; /* Darker color for other details */
-            }
+           }
 
             #Contact .back .social-media-icons {
                 position: absolute;
@@ -1166,8 +1158,7 @@ p {
 
         #Contact h2 {
             margin-bottom: 5px;
-            border: 1px solid #4A66AC; /* Add border around the h2 */
-            padding: 5px; /* Add padding for better visual appearance */
+           padding: 5px; /* Add padding for better visual appearance */
             letter-spacing: 0.17em;
             font-size: 1.2rem;
         }
@@ -1186,8 +1177,6 @@ p {
         }
 
         #Contact p {
-            margin-bottom: -15px;
-            margin-top: -15px;
             font-size: 0.8rem;
         }
 
@@ -1279,8 +1268,7 @@ p {
     }
 
     #About p,
-    #Skills p,
-    #Contact p {
+    #Skills p {
         max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
         font-size: 1rem; /* Adjust font size for smaller screens */
         margin-top: 0.9rem;
@@ -1324,14 +1312,13 @@ p {
             #Contact .back h2 {
                 text-align: left;
                 margin: 0;
-                color: #4A66AC; /* Darker color for the name */
-            }
+ }
 
             #Contact .back p {
                 text-align: left;
                 margin: 0;
-                color: #4A66AC; /* Darker color for other details */
-            }
+                margin-bottom: 5px; /* Adjust this value to reduce space between paragraphs */
+ }
 
             #Contact .back .social-media-icons {
                 position: absolute;
@@ -1366,8 +1353,6 @@ p {
         }
 
         #Contact p {
-            margin-bottom: -15px;
-            margin-top: -15px;
             font-size: 0.8rem;
         }
 
@@ -1436,8 +1421,7 @@ p {
     }
 
     #About p,
-    #Skills p,
-    #Contact p {
+    #Skills p {
         max-width: 100%;
         font-size: 1.2rem;
         margin-top: 0.9rem;
@@ -1469,13 +1453,12 @@ p {
             #Contact .back h2 {
                 text-align: left;
                 margin: 0;
-                color: #4A66AC;
             }
 
             #Contact .back p {
                 text-align: left;
                 margin: 0;
-                color: #4A66AC;
+                margin-bottom: 5px; /* Adjust this value to reduce space between paragraphs */
             }
 
             #Contact .back .social-media-icons {
@@ -1511,8 +1494,6 @@ p {
         }
 
         #Contact p {
-            margin-bottom: -15px;
-            margin-top: -15px;
             font-size: 1rem;
         }
 
