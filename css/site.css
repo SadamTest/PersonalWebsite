@@ -15,7 +15,6 @@ body {
     min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
     height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
 }
-}
 
 
 .container {
@@ -319,51 +318,61 @@ p {
 
 /* About Section Styles */
 #About {
-    /*height: 100vh;*/ /* Make the section fill the viewport height */
-    background-image: url('../images/Background.png');
-    background-size: contain;
-    background-position: center right;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    padding: 50px;
+    padding: 0px 50px;
     max-width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow: hidden; /* Add overflow hidden to hide content outside the viewport */
-    position: relative; /* Add position relative to enable absolute positioning inside */
+    overflow: hidden;
+    transform: translateX(-150%); /* Initial position outside the viewport */
+    transition: transform 2s; /* Add transition for the transform property */
 }
 
-    #About div {
-        flex: 1;
-        margin-right: 50px;
-        transition: transform 2s; /* Add transition for the transform property */
+    #About.active {
+        transform: translateX(0); /* Move the section back to its original position */
     }
 
-    #About.active div {
-        transform: translateX(0); /* Move the content in from the left on activation */
+    #About .content-wrapper {
+        display: flex;
     }
+
+    #About .text-column {
+        flex: 3;
+    }
+
+    #About .image-column {
+        flex: 1;
+        margin-left: 20px;
+        margin-right: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        #About .image-column img {
+            width: 100%;
+            height: auto;
+        }
 
     #About h2 {
         text-align: left;
-        text-decoration: underline;
-        transform: translateX(-100%); /* Initial position outside the viewport */
-        transition: transform 2s; /* Add transition for the transform property */
+        transition: transform 2s;
     }
 
     #About.active h2 {
-        transform: translateX(0); /* Move the heading in from the left on activation */
+        transform: translateX(0);
+        text-decoration: underline; /* Maintain underline style when active */
     }
 
     #About p {
         text-align: left;
-        max-width: 60%; /* Adjust this value according to your design */
-        transform: translateX(-150%); /* Initial position outside the viewport */
-        transition: transform 2s; /* Add transition for the transform property */
+        max-width: 90%;
+        transition: transform 2s;
     }
 
     #About.active p {
-        transform: translateX(0); /* Move the paragraphs in from the left on activation */
+        transform: translateX(0);
     }
 
 
@@ -677,21 +686,40 @@ p {
         font-size: 1.5rem; /* Set the font size as needed */
     }
 
-        #About h2,
-        #Skills h2,
-        #Contact h2 {
-            font-size: 1rem; /* Adjust font size for smaller screens */
-            padding-bottom: 0.5rem;
+    #About h2,
+    #Skills h2,
+    #Contact h2 {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding-bottom: 0.5rem;
+    }
+
+    #About p,
+    #Skills p,
+    #Contact p {
+        max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
+        font-size: 0.7rem; /* Adjust font size for smaller screens */
+        margin-top: 0.5rem;
+        margin-bottom: 0.0rem;
+    }
+
+    #About .content-wrapper {
+        flex-direction: column; /* Change the flex direction to column for smaller screens */
+    }
+
+    #About .text-column,
+    #About .image-column {
+        flex: 1; /* Equal width for both columns on smaller screens */
+        margin: 0; /* Remove margin for both columns */
+    }
+
+    #About .image-column {
+        margin-top: 30px; /* Add some spacing between text and image columns */
+    }
+
+        #About .image-column img {
+            max-width: 80%; /* Set the maximum width for the image to 100% of the container */
         }
 
-        #About p,
-        #Skills p,
-        #Contact p {
-            max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-            font-size: 0.8rem; /* Adjust font size for smaller screens */
-            margin-top: 0.5rem;
-            margin-bottom: 0.0rem;
-        }
 
         #Skills .skills-container {
             grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
@@ -852,24 +880,44 @@ p {
     #About h2,
     #Skills h2,
     #Contact h2 {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
         padding-bottom: 0.7rem;
     }
 
+    #About p,
     #Skills p,
     #Contact p {
         max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
         margin-top: 0.7rem;
         margin-bottom: 0.0rem;
     }
 
-    #About p {
-        max-width: 60%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 1rem; /* Adjust font size for smaller screens */
-        margin-top: 0.7rem;
-        margin-bottom: 0.0rem;
+    #About .content-wrapper {
+        flex-direction: column; /* Change the flex direction to column for smaller screens */
     }
+
+    #About .text-column,
+    #About .image-column {
+        flex: 1; /* Equal width for both columns on smaller screens */
+        margin: 0; /* Remove margin for both columns */
+    }
+
+    #About .image-column {
+        margin-top: 30px; /* Add some spacing between text and image columns */
+    }
+
+        #About .image-column img {
+            max-width: 50%; /* Set the maximum width for the image to 100% of the container */
+        }
+
+
+    /*#About p {
+        max-width: 60%;*/ /* Adjust max-width for paragraphs to fit smaller screens */
+        /*font-size: 1rem;*/ /* Adjust font size for smaller screens */
+        /*margin-top: 0.7rem;
+        margin-bottom: 0.0rem;
+    }*/
 
     #Skills .skills-container {
         grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
@@ -1035,20 +1083,21 @@ p {
         padding-bottom: 0.9rem;
     }
 
+    #About p,
     #Skills p,
     #Contact p {
         max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        font-size: 1rem; /* Adjust font size for smaller screens */
         margin-top: 0.9rem;
         margin-bottom: 0.0rem;
     }
 
-    #About p,{
-        max-width: 60%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-        margin-top: 0.9rem;
+    /*#About p{
+        max-width: 60%;*/ /* Adjust max-width for paragraphs to fit smaller screens */
+        /*font-size: 1.2rem;*/ /* Adjust font size for smaller screens */
+        /*margin-top: 0.9rem;
         margin-bottom: 0.0rem;
-    }
+    }*/
 
     #Skills .skills-container {
         grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
@@ -1157,63 +1206,60 @@ p {
 
         #Home h2 {
             font-size: 2.6rem;
-            Adjust font size for smaller screens padding-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
         }
 
         #Home p {
             font-size: 2.4rem;
-            Adjust font size for smaller screens margin-top: 0.9rem;
+            margin-top: 0.9rem;
             margin-bottom: 0.0rem;
         }
 
         #Home a {
             margin-top: 2.9rem;
-            Adjust the margin for smaller screens margin-bottom: 1.4rem;
+            margin-bottom: 1.4rem;
         }
 
     .social-media-icons {
         margin-bottom: 8.7rem;
-        Adjust margin for smaller screens
-    }
+        }
 
     .social-media-logo {
         width: 45px;
-        Adjust icon size for smaller screens margin: 0 15px;
-        Adjust margin for smaller screens
+        margin: 0 15px;
     }
 
     #scrollDownIcon {
         font-size: 1.9rem;
-        Set the font size as needed
     }
 
     #About h2,
     #Skills h2,
     #Contact h2 {
         font-size: 1.4rem;
-        Adjust font size for smaller screens padding-bottom: 0.9rem;
+        padding-bottom: 0.9rem;
     }
 
+    #About p,
     #Skills p,
     #Contact p {
         max-width: 100%;
-        Adjust max-width for paragraphs to fit smaller screens font-size: 1.2rem;
-        Adjust font size for smaller screens margin-top: 0.9rem;
+        font-size: 1.2rem;
+        margin-top: 0.9rem;
         margin-bottom: 0.0rem;
     }
 
-    #About p, {
+/*    #About p {
         max-width: 60%;
-        Adjust max-width for paragraphs to fit smaller screens font-size: 1.2rem;
-        Adjust font size for smaller screens margin-top: 0.9rem;
+        font-size: 1.2rem;
+        margin-top: 0.9rem;
         margin-bottom: 0.0rem;
-    }
+    }*/
 
     #Skills .skills-container .skill-item img {
         width: 80px;
-        Adjusted width height: auto;
+        height: auto;
         margin: 15px 15px;
-        Adjusted margin
     }
 
         #Contact .business-card {
@@ -1229,14 +1275,12 @@ p {
                 text-align: left;
                 margin: 0;
                 color: #4A66AC;
-                Darker color for the name
             }
 
             #Contact .back p {
                 text-align: left;
                 margin: 0;
                 color: #4A66AC;
-                Darker color for other details
             }
 
             #Contact .back .social-media-icons {
@@ -1248,21 +1292,20 @@ p {
 
                 #Contact .back .social-media-icons a {
                     margin-right: -10px;
-                    Adjust this value to reduce the space between icons
                 }
 
         #Contact h2 {
             margin-bottom: 5px;
             border: 1px solid #4A66AC;
-            Add border around the h2 padding: 5px;
-            Add padding for better visual appearance letter-spacing: 0.19em;
+            padding: 5px;
+            letter-spacing: 0.19em;
             font-size: 1.6rem;
         }
 
         #Contact h3 {
             border: 1px solid #4A66AC;
-            Add border around the h2 padding: 5px;
-            Add padding for better visual appearance letter-spacing: 0.17em;
+            padding: 5px;
+            letter-spacing: 0.17em;
             font-size: 1.3rem;
         }
 
@@ -1292,7 +1335,6 @@ p {
 
         #Contact .social-media-logo {
             width: 40px;
-            Adjust icon size for smaller screens margin: 0 12px;
-            Adjust margin for smaller screens
+            margin: 0 12px;
         }
 }

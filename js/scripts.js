@@ -86,43 +86,33 @@ document.addEventListener('scroll', function () {
 
 //#About section
 document.addEventListener('DOMContentLoaded', function () {
-    // Function to add the 'active' class to the #About section
     function activateAboutSection() {
         var aboutSection = document.getElementById('About');
         aboutSection.classList.add('active');
     }
 
-    // Use Intersection Observer to trigger the animation when #About is in the viewport
-    var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                activateAboutSection();
-                // Stop observing once activated to avoid unnecessary calls
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 }); // Adjust the threshold value as needed
-
-    // Target the #About section with the observer
-    var aboutSection = document.getElementById('About');
-
-    // Check if the section exists before observing (for safety)
-    if (aboutSection) {
-        observer.observe(aboutSection);
+    function isAboutSectionInView() {
+        var aboutSection = document.getElementById('About');
+        var rect = aboutSection.getBoundingClientRect();
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
     }
 
-    // Additionally, you may need to manually trigger the animation on smaller screens
-    // based on your design and requirements.
-
-    // Example: Manually trigger the animation on screens less than or equal to 768px width
-    if (window.innerWidth <= 768) {
-        activateAboutSection();
+    function handleScroll() {
+        if (isAboutSectionInView()) {
+            activateAboutSection();
+            window.removeEventListener('scroll', handleScroll);
+        }
     }
 
-    if (window.innerHeight <= 768) {
+    window.addEventListener('scroll', handleScroll);
+
+    if (isAboutSectionInView()) {
         activateAboutSection();
     }
 });
+
+
 
 //#Skills section
 document.addEventListener('DOMContentLoaded', function () {
