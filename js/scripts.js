@@ -94,8 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function isAboutSectionInView() {
         var aboutSection = document.getElementById('About');
         var rect = aboutSection.getBoundingClientRect();
-        var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-        return rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2;
+        return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
     }
 
     function handleScroll() {
@@ -108,6 +107,14 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
 
     if (isAboutSectionInView()) {
+        activateAboutSection();
+    }
+
+    //if (window.innerWidth <= 500) {
+    //    activateAboutSection();
+    //}
+
+    if (window.innerHight <= 500) {
         activateAboutSection();
     }
 });
@@ -145,11 +152,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // based on your design and requirements.
 
     // Example: Manually trigger the animation on screens less than or equal to 768px width
-    if (window.innerWidth <= 768) {
-        activateSkillsSection();
-    }
+    //if (window.innerWidth <= 500) {
+    //    activateSkillsSection();
+    //}
 
-    if (window.innerHeight <= 768) {
+    if (window.innerHeight <= 500) {
         activateSkillsSection();
     }
 });
