@@ -113,14 +113,14 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: right 0.5s linear;
-    overflow-y: auto; /* Use 'auto' to display scrollbar when needed */
     min-height: 17vh; /* Ensure a minimum height of 17% of the viewport height */
     max-height: calc(100vh - 130px); /* Set the maximum height to the remaining viewport height after considering the top value */
+    overflow-y: auto;
 }
 
-    .menu-options.show {
-        right: 0px; /* Slide in from the right when the 'show' class is added */
-    }
+.menu-options {
+    right: 0;
+}
 
 
     .menu-options ul {
