@@ -575,23 +575,12 @@ p {
 }
 
 #Contact h4 {
-    text-align: center; /* Align text centrally */
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0px; /* Add padding for better visual appearance */
     color: #242852;
 }
-#Contact p {
-    text-align: center; /* Align text centrally */
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding: 0px; /* Add padding for better visual appearance */
 
-}
-
-#Contact .card-inner p {
-    margin-bottom: 10px;
-}
+    #Contact .card-inner p {
+        margin-bottom: 5px;
+    }
 
 #Contact .social-media-icons {
     display: flex;
@@ -628,584 +617,13 @@ p {
 }
 
 
-@media only screen and (max-width: 425px) {
-    .navigation li {
-        margin-right: 20px; /* Adjust margin for smaller screens */
-    }
-
-    .menu-options {
-        /*height: 150%;*/ /* Make the section fill the viewport height */
-        top: 80px; /* Adjust top position for smaller screens */
-        padding: 10px;
-    }
-
-    .menu-icon {
-        font-size: 1rem;
-    }
-
-    .social-media-logo-menu {
-        width: 20px; /* Adjust the size as needed */
-        height: auto;
-        margin: 0 10px; /* Adjust the margin to create more space between icons */
-    }
-
-    .menu-options li {
-        font-size: 0.6rem;
-    }
-
-
-    #Home, #About, #Skills, #Contact {
-        min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
-        height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
-    }
-
-        #Home h2 {
-            font-size: 0.8rem; /* Adjust font size for smaller screens */
-            padding-bottom: 0.5rem;
-        }
-
-        #Home p {
-            font-size: 0.6rem; /* Adjust font size for smaller screens */
-            margin-top: 0.5rem;
-            margin-bottom: 0.0rem;
-        }
-
-        #Home a {
-            margin-top: 2rem; /* Adjust the margin for smaller screens */
-            margin-bottom: 0.5rem;
-        }
-
-    .social-media-icons {
-        margin-bottom: 4rem; /* Adjust margin for smaller screens */
-    }
-
-    .social-media-logo {
-        width: 20px; /* Adjust icon size for smaller screens */
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
-
-    #scrollDownIcon {
-        font-size: 0.8rem; /* Set the font size as needed */
-    }
-
-    #About h2,
-    #Skills h2,
-    #Contact h2 {
-        font-size: 0.6rem; /* Adjust font size for smaller screens */
-        padding-bottom: 0.5rem;
-    }
-
-    #About p,
-    #Skills p {
-        max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 0.4rem; /* Adjust font size for smaller screens */
-        margin-top: 0.5rem;
-        margin-bottom: 0.0rem;
-    }
-
-    #About .content-wrapper {
-        flex-direction: column; /* Change the flex direction to column for smaller screens */
-    }
-
-    #About .text-column,
-    #About .image-column {
-        flex: 1; /* Equal width for both columns on smaller screens */
-        margin: 0; /* Remove margin for both columns */
-    }
-
-    #About .image-column {
-        margin-top: 30px; /* Add some spacing between text and image columns */
-    }
-
-        #About .image-column img {
-            max-width: 80%; /* Set the maximum width for the image to 100% of the container */
-        }
-
-
-    #Skills .skills-container {
-        grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
-        max-width: 100%; /* Adjust maximum width for smaller screens */
-    }
-
-        #Skills .skills-container .skill-item img {
-            width: 50px; /* Adjusted width */
-            height: auto;
-            margin: 10px 10px; /* Adjusted margin */
-        }
-
-    /*#Contact {
-        height: 100vh;*/ /* Make the section fill the viewport height */
-    /*}*/
-
-    #Contact .business-card {
-        perspective: 500px;
-        width: 300px;
-        height: 175px;
-        margin: 50px auto 25px auto;
-    }
-
-    #Contact .front,
-    #Contact .back {
-        padding: 10px;
-    }
-
-        #Contact .back h2 {
-            text-align: left;
-            margin: 0;
-        }
-
-        #Contact .back p {
-            text-align: left;
-            margin: 0;
-       }
-
-        #Contact .back .social-media-icons {
-            position: absolute;
-            bottom: -175px;
-            right: 10px;
-            display: flex;
-        }
-
-            #Contact .back .social-media-icons a {
-                margin-right: -10px; /* Adjust this value to reduce the space between icons */
-            }
-
-    #Contact h2 {
-        margin-bottom: 5px;
-        border: 1px solid #4A66AC; /* Add border around the h2 */
-        padding: 5px; /* Add padding for better visual appearance */
-        letter-spacing: 0.15em;
-        font-size: 1rem;
-    }
-
-    #Contact h3 {
-        border: 1px solid #4A66AC; /* Add border around the h2 */
-        padding: 5px; /* Add padding for better visual appearance */
-        letter-spacing: 0.15em;
-        font-size: 0.9rem;
-    }
-
-    #Contact h4 {
-        margin-bottom: 5px;
-        margin-top: 5px;
-        font-size: 0.9rem;
-    }
-
-    #Contact p {
-        margin-bottom: 0px;
-        margin-top: 0px;
-        font-size: 0.8rem;
-    }
-
-    #Contact .card-inner p {
-        margin-bottom: 5px;
-    }
-
-    #Contact .social-media-icons {
-        margin-top: 5px;
-    }
-
-        #Contact .social-media-icons a {
-            margin-right: 5px;
-        }
-
-    #Contact .social-media-logo {
-        width: 30px; /* Adjust icon size for smaller screens */
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
-}
-
-
-
-
-
-@media only screen and (max-width: 768px) {
-    .navigation li {
-        margin-right: 20px; /* Adjust margin for smaller screens */
-    }
-
-    .menu-options {
-        /*height: 150%;*/ /* Make the section fill the viewport height */
-        top: 80px; /* Adjust top position for smaller screens */
-        padding: 10px;
-    }
-
-    .menu-icon {
-        font-size: 2.5rem;
-    }
-
-    .social-media-logo-menu {
-        width: 25px; /* Adjust the size as needed */
-        height: auto;
-        margin: 0 10px; /* Adjust the margin to create more space between icons */
-    }
-
-    .menu-options li {
-        font-size: 0.8rem;
-    }
-
-
-    #Home, #About, #Skills, #Contact {
-        min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
-        height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
-    }
-
-        #Home h2 {
-            font-size: 1.2rem; /* Adjust font size for smaller screens */
-            padding-bottom: 0.5rem;
-        }
-
-        #Home p {
-            font-size: 1rem; /* Adjust font size for smaller screens */
-            margin-top: 0.5rem;
-            margin-bottom: 0.0rem;
-        }
-
-        #Home a {
-            margin-top: 2.5rem; /* Adjust the margin for smaller screens */
-            margin-bottom: 1rem;
-        }
-
-    .social-media-icons {
-        margin-bottom: 8rem; /* Adjust margin for smaller screens */
-    }
-
-    .social-media-logo {
-        width: 20px; /* Adjust icon size for smaller screens */
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
-
-    #scrollDownIcon {
-        font-size: 1.5rem; /* Set the font size as needed */
-    }
-
-    #About h2,
-    #Skills h2,
-    #Contact h2 {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-        padding-bottom: 0.5rem;
-    }
-
-    #About p,
-    #Skills p
-    {
-        max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 0.7rem; /* Adjust font size for smaller screens */
-        margin-top: 0.5rem;
-        margin-bottom: 0.0rem;
-    }
-
-    #About .content-wrapper {
-        flex-direction: column; /* Change the flex direction to column for smaller screens */
-    }
-
-    #About .text-column,
-    #About .image-column {
-        flex: 1; /* Equal width for both columns on smaller screens */
-        margin: 0; /* Remove margin for both columns */
-    }
-
-    #About .image-column {
-        margin-top: 30px; /* Add some spacing between text and image columns */
-    }
-
-        #About .image-column img {
-            max-width: 80%; /* Set the maximum width for the image to 100% of the container */
-        }
-
-
-        #Skills .skills-container {
-            grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
-            max-width: 100%; /* Adjust maximum width for smaller screens */
-        }
-
-            #Skills .skills-container .skill-item img {
-                width: 50px; /* Adjusted width */
-                height: auto;
-                margin: 10px 10px; /* Adjusted margin */
-            }
-
-    /*#Contact {
-        height: 100vh;*/ /* Make the section fill the viewport height */
-    /*}*/
-            
-    #Contact .business-card {
-        perspective: 500px;
-        width: 300px;
-        height: 175px;
-        margin: 50px auto 25px auto;
-    }
-
-    #Contact .front,
-    #Contact .back {
-        padding: 10px;
-    }
-
-        #Contact .back h2 {
-            text-align: left;
-            margin: 0;
-        }
-
-        #Contact .back p {
-            text-align: left;
-            margin: 0;
-      }
-
-        #Contact .back .social-media-icons {
-            position: absolute;
-            bottom: -175px;
-            right: 10px;
-            display: flex;
-        }
-
-            #Contact .back .social-media-icons a {
-                margin-right: -10px; /* Adjust this value to reduce the space between icons */
-            }
-
-    #Contact h2 {
-        margin-bottom: 5px;
-        border: 1px solid #4A66AC; /* Add border around the h2 */
-        padding: 5px; /* Add padding for better visual appearance */
-        letter-spacing: 0.15em;
-        font-size: 1rem;
-    }
-
-    #Contact h3 {
-        border: 1px solid #4A66AC; /* Add border around the h2 */
-        padding: 5px; /* Add padding for better visual appearance */
-        letter-spacing: 0.15em;
-        font-size: 0.9rem;
-    }
-
-    #Contact h4 {
-        margin-bottom: 5px;
-        margin-top: 5px;
-        font-size: 0.9rem;
-    }
-
-    #Contact p {
-        font-size: 0.8rem;
-    }
-
-    #Contact .card-inner p {
-        margin-bottom: 5px;
-    }
-
-    #Contact .social-media-icons {
-        margin-top: 5px;
-    }
-
-        #Contact .social-media-icons a {
-            margin-right: 5px;
-        }
-
-    #Contact .social-media-logo {
-        width: 30px; /* Adjust icon size for smaller screens */
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
-}
-
-
-@media only screen and (max-width: 1050px) {
-    .navigation li {
-        margin-right: 20px; /* Adjust margin for smaller screens */
-    }
-
-    .menu-options {
-        /*height: 150%;*/ /* Make the section fill the viewport height */
-        top: 80px; /* Adjust top position for smaller screens */
-        padding: 10px;
-    }
-
-    .menu-icon {
-        font-size: 2.8rem;
-    }
-
-    .social-media-logo-menu {
-        width: 28px; /* Adjust the size as needed */
-        height: auto;
-        margin: 0 12px; /* Adjust the margin to create more space between icons */
-    }
-
-    .menu-options li {
-        font-size: 1rem;
-    }
-
-
-    #Home, #About, #Skills, #Contact {
-        min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
-        height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
-    }
-
-        #Home h2 {
-            font-size: 1.8rem; /* Adjust font size for smaller screens */
-            padding-bottom: 0.6rem;
-        }
-
-        #Home p {
-            font-size: 1.6rem; /* Adjust font size for smaller screens */
-            margin-top: 0.7rem;
-            margin-bottom: 0.0rem;
-        }
-
-        #Home a {
-            margin-top: 2.7rem; /* Adjust the margin for smaller screens */
-            margin-bottom: 1.2rem;
-        }
-
-    .social-media-icons {
-        margin-bottom: 8.2rem; /* Adjust margin for smaller screens */
-    }
-
-    .social-media-logo {
-        width: 35px; /* Adjust icon size for smaller screens */
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
-
-    #scrollDownIcon {
-        font-size: 1.7rem; /* Set the font size as needed */
-    }
-
-    #About h2,
-    #Skills h2,
-    #Contact h2 {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-        padding-bottom: 0.7rem;
-    }
-
-    #About p,
-    #Skills p
-     {
-        max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 0.8rem; /* Adjust font size for smaller screens */
-        margin-top: 0.7rem;
-        margin-bottom: 0.0rem;
-    }
-
-    #About .content-wrapper {
-        flex-direction: column; /* Change the flex direction to column for smaller screens */
-    }
-
-    #About .text-column,
-    #About .image-column {
-        flex: 1; /* Equal width for both columns on smaller screens */
-        margin: 0; /* Remove margin for both columns */
-    }
-
-    #About .image-column {
-        margin-top: 30px; /* Add some spacing between text and image columns */
-    }
-
-        #About .image-column img {
-            max-width: 50%; /* Set the maximum width for the image to 100% of the container */
-        }
-
-
-    /*#About p {
-        max-width: 60%;*/ /* Adjust max-width for paragraphs to fit smaller screens */
-        /*font-size: 1rem;*/ /* Adjust font size for smaller screens */
-        /*margin-top: 0.7rem;
-        margin-bottom: 0.0rem;
-    }*/
-
-    #Skills .skills-container {
-        grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
-        max-width: 100%; /* Adjust maximum width for smaller screens */
-    }
-
-        #Skills .skills-container .skill-item img {
-            width: 50px; /* Adjusted width */
-            height: auto;
-            margin: 10px 10px; /* Adjusted margin */
-        }
-
-    /*#Contact {
-        height: 100vh;*/ /* Make the section fill the viewport height */
-    /*}*/
-
-        #Contact .business-card {
-            perspective: 500px;
-            width: 300px;
-            height: 175px;
-            margin: 50px auto 25px auto;
-        }
-
-        #Contact .front,
-        #Contact .back {
-            padding: 10px;
-        }
-
-            #Contact .back h2 {
-                text-align: left;
-                margin: 0;
-           }
-
-            #Contact .back p {
-                text-align: left;
-                margin: 0;
-           }
-
-            #Contact .back .social-media-icons {
-                position: absolute;
-                bottom: -175px;
-                right: 10px;
-                display: flex;
-            }
-
-                #Contact .back .social-media-icons a {
-                    margin-right: -10px; /* Adjust this value to reduce the space between icons */
-                }
-
-        #Contact h2 {
-            margin-bottom: 5px;
-           padding: 5px; /* Add padding for better visual appearance */
-            letter-spacing: 0.17em;
-            font-size: 1.2rem;
-        }
-
-        #Contact h3 {
-            border: 1px solid #4A66AC; /* Add border around the h2 */
-            padding: 5px; /* Add padding for better visual appearance */
-            letter-spacing: 0.17em;
-            font-size: 1.2rem;
-        }
-
-        #Contact h4 {
-            margin-bottom: 5px;
-            margin-top: 5px;
-            font-size: 1rem;
-        }
-
-        #Contact p {
-            font-size: 0.8rem;
-        }
-
-        #Contact .card-inner p {
-            margin-bottom: 5px;
-        }
-
-        #Contact .social-media-icons {
-            margin-top: 5px;
-        }
-
-            #Contact .social-media-icons a {
-                margin-right: 5px;
-            }
-
-        #Contact .social-media-logo {
-            width: 35px; /* Adjust icon size for smaller screens */
-            margin: 0 12px; /* Adjust margin for smaller screens */
-        }
-}
-
 @media only screen and (max-width: 1450px) {
     .navigation li {
-        margin-right: 20px; /* Adjust margin for smaller screens */
+        margin-right: 20px
     }
 
     .menu-options {
-        /*height: 150%;*/ /* Make the section fill the viewport height */
-        top: 80px; /* Adjust top position for smaller screens */
+        top: 80px;
         padding: 10px;
     }
 
@@ -1214,9 +632,9 @@ p {
     }
 
     .social-media-logo-menu {
-        width: 28px; /* Adjust the size as needed */
+        width: 28px;
         height: auto;
-        margin: 0 10px; /* Adjust the margin to create more space between icons */
+        margin: 0 10px;
     }
 
     .menu-options li {
@@ -1225,83 +643,71 @@ p {
 
 
 #Home, #About, #Skills, #Contact
-
 {
-    min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
-    height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
+    min-height: 100vh;
+    height: auto;
 }
 
         #Home h2 {
-            font-size: 2.0rem; /* Adjust font size for smaller screens */
+            font-size: 2.0rem;
             padding-bottom: 0.8rem;
         }
 
         #Home p {
-            font-size: 1.8rem; /* Adjust font size for smaller screens */
+            font-size: 1.8rem;
             margin-top: 0.9rem;
             margin-bottom: 0.0rem;
         }
 
         #Home a {
-            margin-top: 2.9rem; /* Adjust the margin for smaller screens */
+            margin-top: 2.9rem;
             margin-bottom: 1.4rem;
         }
 
     .social-media-icons {
-        margin-bottom: 7.5rem; /* Adjust margin for smaller screens */
+        margin-bottom: 7.5rem;
     }
 
     .social-media-logo {
-        width: 40px; /* Adjust icon size for smaller screens */
-        margin: 0 15px; /* Adjust margin for smaller screens */
+        width: 40px;
+        margin: 0 15px;
     }
 
     #scrollDownIcon {
-        font-size: 1.9rem; /* Set the font size as needed */
+        font-size: 1.9rem;
     }
 
     #About h2,
     #Skills h2,
     #Contact h2 {
-        font-size: 1.4rem; /* Adjust font size for smaller screens */
+        font-size: 1.4rem;
         padding-bottom: 0.9rem;
     }
 
     #About p,
     #Skills p {
-        max-width: 100%; /* Adjust max-width for paragraphs to fit smaller screens */
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        max-width: 100%;
+        font-size: 1rem;
         margin-top: 0.9rem;
         margin-bottom: 0.0rem;
     }
 
-    /*#About p{
-        max-width: 60%;*/ /* Adjust max-width for paragraphs to fit smaller screens */
-        /*font-size: 1.2rem;*/ /* Adjust font size for smaller screens */
-        /*margin-top: 0.9rem;
-        margin-bottom: 0.0rem;
-    }*/
-
     #Skills .skills-container {
-        grid-template-columns: repeat(3, 1fr); /* Display images in 2 columns for smaller screens */
-        max-width: 100%; /* Adjust maximum width for smaller screens */
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
     }
 
         #Skills .skills-container .skill-item img {
-            width: 50px; /* Adjusted width */
+            width: 50px;
             height: auto;
-            margin: 10px 10px; /* Adjusted margin */
+            margin: 10px 10px;
         }
-
-    /*#Contact {
-        height: 100vh;*/ /* Make the section fill the viewport height */
-    /*}*/
 
         #Contact .business-card {
             perspective: 500px;
             width: 350px;
-            height: 175px;
-            margin: 100px auto 25px auto;
+            height: 200px;
+            margin: 160px auto 25px auto;
         }
 
         #Contact .front,
@@ -1309,46 +715,17 @@ p {
             padding: 10px;
         }
 
-            #Contact .back h2 {
-                text-align: left;
-                margin: 0;
- }
-
-            #Contact .back p {
-                text-align: left;
-                margin: 0;
-                margin-bottom: 5px; /* Adjust this value to reduce space between paragraphs */
- }
-
-            #Contact .back .social-media-icons {
-                position: absolute;
-                bottom: -175px;
-                right: 10px;
-                display: flex;
-            }
-
-                #Contact .back .social-media-icons a {
-                    margin-right: -10px; /* Adjust this value to reduce the space between icons */
-                }
-
         #Contact h2 {
-            margin-bottom: 5px;
-            border: 1px solid #4A66AC; /* Add border around the h2 */
-            padding: 5px; /* Add padding for better visual appearance */
             letter-spacing: 0.19em;
             font-size: 1.3rem;
         }
 
         #Contact h3 {
-            border: 1px solid #4A66AC; /* Add border around the h2 */
-            padding: 5px; /* Add padding for better visual appearance */
             letter-spacing: 0.17em;
             font-size: 1.1rem;
         }
 
         #Contact h4 {
-            margin-bottom: 5px;
-            margin-top: 5px;
             font-size: 1rem;
         }
 
@@ -1356,32 +733,25 @@ p {
             font-size: 0.8rem;
         }
 
-        #Contact .card-inner p {
-            margin-bottom: 5px;
-        }
-
-        #Contact .social-media-icons {
-            margin-top: 5px;
-        }
-
-            #Contact .social-media-icons a {
-                margin-right: 5px;
-            }
-
         #Contact .social-media-logo {
-            width: 34px; /* Adjust icon size for smaller screens */
-            margin: 0 12px; /* Adjust margin for smaller screens */
+            width: 34px; 
+            margin: 0 12px; 
         }
+
+    #Contact .back .social-media-icons {
+        bottom: -165px;
+        right: 20px;
+    }
 }
 
 @media only screen and (min-width: 1451px) {
     .navigation li {
-        margin-right: 30px; /*Adjust margin for smaller screens*/
+        margin-right: 30px;
     }
 
     #Home, #About, #Skills, #Contact {
-        min-height: 100vh; /* Ensure a minimum height of 100% of the viewport height */
-        height: auto; /* Allow the section to expand beyond 100vh if the content is taller */
+        min-height: 100vh;
+        height: auto;
     }
 
         #Home h2 {
@@ -1428,13 +798,6 @@ p {
         margin-bottom: 0.0rem;
     }
 
-/*    #About p {
-        max-width: 60%;
-        font-size: 1.2rem;
-        margin-top: 0.9rem;
-        margin-bottom: 0.0rem;
-    }*/
-
     #Skills .skills-container .skill-item img {
         width: 80px;
         height: auto;
@@ -1450,45 +813,17 @@ p {
             padding: 10px;
         }
 
-            #Contact .back h2 {
-                text-align: left;
-                margin: 0;
-            }
-
-            #Contact .back p {
-                text-align: left;
-                margin: 0;
-                margin-bottom: 5px; /* Adjust this value to reduce space between paragraphs */
-            }
-
-            #Contact .back .social-media-icons {
-                position: absolute;
-                bottom: -175px;
-                right: 10px;
-                display: flex;
-            }
-
-                #Contact .back .social-media-icons a {
-                    margin-right: -10px;
-                }
-
         #Contact h2 {
-            margin-bottom: 5px;
-            padding: 5px;
             letter-spacing: 0.19em;
             font-size: 1.6rem;
         }
 
         #Contact h3 {
-            border: 1px solid #4A66AC;
-            padding: 5px;
             letter-spacing: 0.17em;
             font-size: 1.3rem;
         }
 
         #Contact h4 {
-            margin-bottom: 5px;
-            margin-top: 5px;
             font-size: 1.2rem;
         }
 
@@ -1496,20 +831,13 @@ p {
             font-size: 1rem;
         }
 
-        #Contact .card-inner p {
-            margin-bottom: 5px;
-        }
-
-        #Contact .social-media-icons {
-            margin-top: 5px;
-        }
-
-            #Contact .social-media-icons a {
-                margin-right: 5px;
-            }
-
         #Contact .social-media-logo {
             width: 40px;
             margin: 0 12px;
         }
+
+    #Contact .back .social-media-icons {
+        bottom: -185px;
+        right: 20px;
+    }
 }
